@@ -5,7 +5,7 @@ import navData from './data'
 
 function Navbar() {
   return (
-    <div className='bg-[var(--background)] px-2 py-2 w-[750px] border border-white border-opacity-10 rounded-xl fixed mt-20 flex justify-between max-w-screen-2xl font-[family-name:var(--figtree)]'>
+    <div className='bg-[#000] z-[999] px-2 py-2 w-[750px] border border-white border-opacity-10 rounded-xl fixed mt-20 flex justify-between max-w-screen-2xl font-[family-name:var(--figtree)]'>
         <Link href='/'>
             <Image src='/icon.svg' height={45} width={45} alt='logo' />
         </Link>

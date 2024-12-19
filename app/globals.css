@@ -2,20 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-} */
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000;
-    --foreground: #fff;
-    --primary: #d4d4d4;
-    --component: #0C0C0C;
-    
-  }
+:root {
+  --background: #000;
+  --foreground: #fff;
+  --primary: #d4d4d4;
+  --component: #0C0C0C;
 }
+
 
 body {
   color: var(--foreground);
@@ -29,3 +22,66 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+.container {
+  position: relative;
+}
+
+.animation-wrapper {
+  display: flex;
+  gap: 24px;
+  overflow: hidden;
+  height: 600px; 
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-up 10s linear infinite;
+  animation-play-state: running; 
+  transition: animation 0.3s ease; 
+}
+
+.column.middle {
+  animation: scroll-down 10s linear infinite;
+}
+
+.column.delay-5s {
+  animation-delay: 5s;
+}
+
+.column.delay-10s {
+  animation-delay: 10s;
+}
+
+.column:hover {
+  animation-play-state: paused; 
+}
+
+.testimony-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes scroll-up {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes scroll-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+

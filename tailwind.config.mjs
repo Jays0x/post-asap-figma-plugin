@@ -6,6 +6,7 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  // darkMode: 'selectors',
   theme: {
     extend: {
       colors: {
@@ -13,7 +14,6 @@ export default {
         foreground: "var(--foreground)",
       },
     },
-    darkMode: true
   },
   plugins: [],
 };
