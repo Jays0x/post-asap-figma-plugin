@@ -1,6 +1,7 @@
 import CallToAction from "@/components/home/cta/CallToAction";
 import Designers from "@/components/home/designers/Designers";
 import Features from "@/components/home/features/Features";
+import Footer from "@/components/home/footer/Footer";
 import Hero from "@/components/home/hero/Hero";
 import Platforms from "@/components/home/platforms/Platforms";
 import Simple from "@/components/home/simple/Simple";
@@ -17,6 +18,7 @@ export default function Home() {
        <Platforms />
        <Testimonies />
        <CallToAction />
+       <Footer />
     </div>
   );
 }
