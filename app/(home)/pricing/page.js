@@ -6,7 +6,7 @@ import React from 'react'
 
 function Page() {
   return (
-    <div className="flex flex-col h-full font-[family-name:var(--figtree)] pt-[180px]">
+    <div className="flex flex-col h-full font-[family-name:var(--figtree)] ">
        <Hero />
        <Price />
        <CallToAction />

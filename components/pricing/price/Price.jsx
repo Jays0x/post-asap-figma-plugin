@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Monthly from './Monthly';
 
 function Price() {
-  const [billing, setBilling] = useState('monthly'); // 'monthly' or 'annually'
+  const [billing, setBilling] = useState('monthly');
 
   const toggleBilling = () => {
     setBilling((prev) => (prev === 'monthly' ? 'annually' : 'monthly'));

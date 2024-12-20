@@ -20,6 +20,7 @@ function Navbar() {
             }
         </div>
 
+        
         <Link href='/register' className='bg-[#ffffff20] border border-white border-opacity-10 flex justify-center items-center text-center py-2  px-4 rounded-lg text-white font-medium text-[14px] hover:bg-[#ffffff10]'>Get started</Link>
     </div>
   )
