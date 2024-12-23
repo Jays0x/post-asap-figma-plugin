@@ -20,23 +20,17 @@ function Page() {
   return (
     <div className='flex flex-col items-center justify-center mt-[120px] font-[family-name:var(--figtree)]'>
         <div className='mb-10'>
-            <h1 className='text-[30px] text-center font-medium'>Log in</h1>
-            <p className='text-white/70 text-center'>Kindly log in to your account</p>
+            <h1 className='text-[30px] text-center font-medium'>Reset password</h1>
+            <p className='text-white/70 text-center'>Kindly reset your password to protect your account</p>
         </div>
 
         <div>
             <form className='flex flex-col gap-4'>
 
-                <input 
-                type='email' 
-                placeholder='Enter email' 
-                className='w-[350px] px-4 py-2 rounded-lg bg-[#000] border border-white/10 placeholder:text-white/30'
-                />
-
                 <div className='w-[350px] px-4 py-2 rounded-lg bg-[#000] border border-white/10  flex items-center'>
                     <input 
                     type={`${ show ? 'text' : 'password'}` }
-                    placeholder='Enter password' 
+                    placeholder='New password' 
                     className='w-full bg-transparent border-none outline-none placeholder:text-white/30'
                     />
 
@@ -47,16 +41,23 @@ function Page() {
                     
                 </div>
 
-                <Link href='/forgot-password' className="flex w-[350px] flex-col items-end justify-center py-2 ">
-                    <p className="border-b border-white/70 text-white/70 ">Forgot password?</p>
-                </Link>
+                <div className='w-[350px] px-4 py-2 rounded-lg bg-[#000] border border-white/10  flex items-center'>
+                    <input 
+                    type={`${ show ? 'text' : 'password'}` }
+                    placeholder='Confirm password' 
+                    className='w-full bg-transparent border-none outline-none placeholder:text-white/30'
+                    />
 
-                <Link href='/dash/authenticate' className='bg-[var(--primary)] px-4 w-[350px] text-center font-medium text-black py-3 rounded-lg'>Log in</Link>
+                   
+                    {
+                        show ? <LuEyeClosed onClick={closeShow} className="cursor-pointer"/> : <FiEye onClick={handleShow} className="cursor-pointer"/> 
+                    }
+                    
+                </div>
+
+                <Link href='/dash/password' className='bg-[var(--primary)] px-4 w-[350px] text-center font-medium text-black py-3 rounded-lg'>Reset now</Link>
             </form>
-            <div className="mt-[40px] flex gap-2 justify-center">
-                <p className="text-white/70">Don&apos;t have an account?</p>
-                <Link href='/register' className="font-semibold">Sign up</Link>
-            </div>
+
         </div>
     </div>
   )
